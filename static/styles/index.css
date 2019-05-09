@@ -79,6 +79,7 @@ html, body {
     width: 20%;
     height: 95%;
 
+    min-width: 170px;
     max-width: 250px;
 
     background: #636363;
@@ -86,7 +87,27 @@ html, body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
 
+.main__confirm-bar-answers {
+    display: flex;
+
+    width: 95%;
+    height: 90%;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    overflow-y: auto;
+
+    border-top: solid 1px #575757;
+}
+
+.main__confirm-bar-answers::-webkit-scrollbar { 
+    display: none;
+}
+
 .main__confirm-bar-title {
+    height: 10%;
+
     user-select: none;
     color: rgb(169, 241, 169);
 }
@@ -199,7 +220,7 @@ html, body {
 }
 
 
-.success-btn {
+.confirm-btn {
     background-color: rgb(169, 241, 169);
 }
 
@@ -211,7 +232,7 @@ html, body {
     background-color: rgb(248, 131, 131);   
 }
 
-.done-btn {
+.apply-btn {
     width: 100%;
     background-color: rgb(131, 225, 248);  
 }
@@ -226,6 +247,7 @@ html, body {
     width: 20%;
     height: 95%;
 
+    min-width: 170px;
     max-width: 250px;
 
     background: #636363;
@@ -233,9 +255,29 @@ html, body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
 
+.main__reject-bar-answers {
+    display: flex;
+
+    width: 95%;
+    height: 90%;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    overflow-y: auto;
+
+    border-top: solid 1px #575757;
+}
+
 .main__reject-bar-title {
+    height: 10%;
+
     user-select: none;
     color: rgb(248, 131, 131)
+}
+
+.main__reject-bar-answers::-webkit-scrollbar { 
+    display: none;
 }
 
 
