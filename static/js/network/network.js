@@ -37,7 +37,7 @@ export default class NetworkHandler {
 		
 		fetch(path, options)
 			.then(function (response) {
-				return response.status;
+				return response.json();
 			})
 			.then(function (data) {
 				callback(data);

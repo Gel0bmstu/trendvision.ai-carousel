@@ -1,0 +1,14 @@
+@import '../../../styles/templates.scss';
+
+.main__confirm-bar {
+    @extend %template-bar;
+}
+
+.main__confirm-bar-answers {
+    @extend %template-bar-answers;
+}
+
+.main__confirm-bar-title {
+    @extend %template-bar-title;
+    color: $confirm-color;
+}

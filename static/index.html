@@ -9,55 +9,13 @@
     <title>S7_chose_app</title>
 </head>
 <body>
-    <div class="header">
-        <div class="header__container">
-            <img src="./icons/S7_new_logo.png" class="header__container-logo" alt="">
-            <div class="header__container-hrefs-block">
-                <a href="/"><i class="fas fa-chart-bar"></i> Statistic</a>
-                <a href="/"><i class="fas fa-cog"></i> Settings</a>
-            </div>
-        </div>
-    </div>
+    <div class="header"></div>
     <div class="main">
-        <div class="main__confirm-bar">
-            <div class="main__confirm-bar-title">
-                <h1>Confirm</h1>
-            </div>
-            <div class="main__confirm-bar-answers"></div>
-        </div>
-        <div class="main__chose-section">
-            <div class="main__chose-section-graph">
-                <img src="http://stock-list.ru/wp-content/uploads/2013/11/01.png" alt="" class="main__chose-section-graph-image">
-            </div>
-            <div class="main__chose-section-carousel">
-                <div class="main__chose-section-carousel-item">1</div>
-                <div class="main__chose-section-carousel-item">2</div>
-                <div class="main__chose-section-carousel-item">3</div>
-                <div class="main__chose-section-carousel-item">4</div>
-                <div class="main__chose-section-carousel-item">5</div>
-                <div class="main__chose-section-carousel-item">6</div>
-                <div class="main__chose-section-carousel-item">7</div>
-                <div class="main__chose-section-carousel-item">8</div>
-                <div class="main__chose-section-carousel-item">9</div>
-                <div class="main__chose-section-carousel-item">10</div>
-                <div class="main__chose-section-carousel-item">11</div>
-                <div class="main__chose-section-carousel-item">12</div>
-                <div class="main__chose-section-carousel-item">13</div>
-            </div>
-            <div class="main__chose-section-buttons-section">
-                <button class="main__chose-section-buttons-section-button confirm-btn" data-section="confirm"><i class="fas fa-arrow-left" data-section="confirm"></i></button>
-                <button class="main__chose-section-buttons-section-button undo-btn" data-section="undo"><i class="fas fa-undo-alt" data-section="undo"></i></button>
-                <button class="main__chose-section-buttons-section-button reject-btn" data-section="reject"><i class="fas fa-arrow-right" data-section="reject"></i></button>            
-                <button class="main__chose-section-buttons-section-button apply-btn" data-section="apply"><i class="fas fa-check" data-section="apply"></i></button>                        
-            </div>
-        </div>
-        <div class="main__reject-bar">
-            <div class="main__reject-bar-title">
-                <h1>Reject</h1>
-            </div>
-            <div class="main__reject-bar-answers"></div>
-        </div>
+        <div class="main__confirm-bar"></div>
+        <div class="main__chose-section"></div>
+        <div class="main__reject-bar"></div>
     </div>
+    <script src="./js/templateEngine/handlebars.js"></script>
     <script type="module" src="./js/logic.js "></script>
 </body>
 </html>

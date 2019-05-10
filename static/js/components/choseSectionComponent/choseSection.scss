@@ -1,0 +1,134 @@
+@import '../../../styles/templates.scss';
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 95vh;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__chose-section {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    width: 50%;
+    height: 70%;
+
+    min-width: 450px;
+    min-height: 600px;
+
+    background: $tile-color;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.main__chose-section-graph {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    height: 50%;
+    width: 95%;
+
+    min-height: 300px;
+}
+
+.main__chose-section-graph-image {
+    display: block;
+    margin: 10px 0 0 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.main__chose-section-carousel {
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 95%;
+    height: 25%;
+
+    max-height: 125px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    border: solid grey 1px;
+}
+
+.main__chose-section-carousel::-webkit-scrollbar { 
+    width: 0; 
+}
+
+.main__chose-section-carousel-item {
+    width: 100px;
+
+    margin: 5px;
+
+    min-height: 100px;
+    min-width: 150px; 
+
+    background: $carousel-item-color;
+}
+
+.main__chose-section-buttons-section {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 95%;
+    /* height: 25%; */
+
+    max-width: 500px;
+    max-height: 125px;
+
+
+    justify-content: space-between;
+
+}
+
+.main__chose-section-buttons-section-button {
+    width: 32%;
+    height: 50px;
+
+    margin: 5px 0 0 0;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 0.8;
+    transition: 0.2s linear;
+
+    font-size: 20px;
+    color: $text-color;
+}
+
+.main__chose-section-buttons-section-button:hover {
+    @extend %template-btn
+}
+
+
+.confirm-btn {
+    background-color: $confirm-color;
+}
+
+.undo-btn {
+    background-color: $undo-color; 
+}
+
+.reject-btn {
+    background-color: $reject-color;
+}
+
+.apply-btn {
+    width: 100%;
+    background-color: $apply-color;
+}

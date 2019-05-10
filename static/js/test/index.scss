@@ -1,0 +1,16 @@
+@import './template.scss';
+
+.left {
+    @extend %title;
+    color: green;
+}
+
+.center {
+    @extend %title;
+    color: yellow;
+}
+
+.right {
+    @extend %title;
+    color: red;
+}

@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const handlers = require('./server/handlers.js')
 
 app.use(express.static('static'));
 
-router.get('/',  (req, res) => {
-    res.send('salaaam');
+app.get('/api/apply',  (req, res) => {
+    // console.log(req.body);
+    handlers.apply(res);    
 });
 
-router.post('/api/apply',  (req, res) => {
+app.post('/api/apply',  (req, res) => {
     handlers.apply(res);
 });
   

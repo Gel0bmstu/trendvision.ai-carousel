@@ -1,0 +1,14 @@
+@import './templates.scss';
+
+@import '../js/components/choseSectionComponent/choseSection.scss';
+@import '../js/components/confirlmBarComponent/confirmBar.scss';
+@import '../js/components/headerComponent/header.scss';
+@import '../js/components/rejectBarComponent/rejectBar.scss';
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+    background: $background-color;
+
+    font-family: $font-family;
+}

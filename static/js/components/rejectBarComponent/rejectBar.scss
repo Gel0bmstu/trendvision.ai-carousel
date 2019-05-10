@@ -1,0 +1,14 @@
+@import '../../../styles/templates.scss';
+
+.main__reject-bar {
+    @extend %template-bar;
+}
+
+.main__reject-bar-answers {
+    @extend %template-bar-answers;
+}
+
+.main__reject-bar-title {
+    @extend %template-bar-title;
+    color: $reject-color;
+}

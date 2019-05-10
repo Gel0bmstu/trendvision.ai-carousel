@@ -1,0 +1,14 @@
+.left, .center, .right {
+  border: solid;
+  margin: 5px; }
+
+.left {
+  color: green; }
+
+.center {
+  color: yellow; }
+
+.right {
+  color: red; }
+
+/*# sourceMappingURL=index.css.map */
