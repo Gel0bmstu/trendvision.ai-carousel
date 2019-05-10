@@ -1,2 +1,4 @@
 sass-cash/
 node_modules/
+
+*.scss
