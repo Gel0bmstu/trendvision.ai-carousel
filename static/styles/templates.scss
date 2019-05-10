@@ -42,7 +42,9 @@ $font-family: Arial, Helvetica, sans-serif;
     height: 90%;
 
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     overflow-y: auto;
 
@@ -62,7 +64,7 @@ $font-family: Arial, Helvetica, sans-serif;
 // Кпонки
 
 %template-btn {
-    width: 32%;
+    // width: 32%;
     height: 50px;
 
     margin: 5px 0 0 0;

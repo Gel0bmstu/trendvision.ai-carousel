@@ -18,6 +18,7 @@ const heeaderRoot = document.querySelector('.header');
 const choseRoot = document.querySelector('.main__chose-section');
 const confirmRoot = document.querySelector('.main__confirm-bar');
 const rejectRoot = document.querySelector('.main__reject-bar');
+// const settingsRoot = document.querySelector('.settings');
 
 // console.log(heeaderRoot, choseRoot,confirmRoot,rejectRoot)
 
@@ -25,11 +26,12 @@ const choseView = new choseSectionView(choseRoot);
 const headerview = new headerView(heeaderRoot);
 const confirmView = new confirmBarView(confirmRoot);
 const rejectView = new rejectBarView(rejectRoot);
+// const settingsView = new settingsView(settingsRoot);
+
+
+headerview.show();
 
 function showAll(res) {
-
-
-    headerview.show();
     choseView.show(res);
     confirmView.show();
     rejectView.show();
@@ -38,7 +40,7 @@ function showAll(res) {
 // Инициирующий запрос за первым графиком и тегами
 netHand.doGet({
     callback(res) {
-        // console.log(res);
+        console.log(res);
         // Отрисовываем элементы
         showAll(res)
     

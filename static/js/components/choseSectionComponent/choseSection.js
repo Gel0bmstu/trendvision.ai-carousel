@@ -4,7 +4,7 @@ const templateScript = `
     </div>
     <div class="main__chose-section-carousel">
         {{#each tags}}
-            <div class="main__chose-section-carousel-item">{{tag}}</div>
+            <div class="main__chose-section-carousel-item"><p>{{this}}</p></div>
         {{/each}}
     </div>
     <div class="main__chose-section-buttons-section">

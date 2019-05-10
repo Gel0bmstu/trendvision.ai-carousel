@@ -14,7 +14,9 @@
   width: 95%;
   height: 90%;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow-y: auto;
   border-top: solid 1px #575757; }
 
@@ -25,8 +27,7 @@
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button:hover {
-  width: 32%;
+.main__chose-section-buttons-section-button {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -57,7 +58,9 @@
   width: 95%;
   height: 90%;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow-y: auto;
   border-top: solid 1px #575757; }
 
@@ -68,8 +71,7 @@
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button:hover {
-  width: 32%;
+.main__chose-section-buttons-section-button {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -96,7 +98,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 50%;
-  height: 70%;
+  height: 76%;
   min-width: 450px;
   min-height: 600px;
   background: #636363;
@@ -114,30 +116,44 @@
   display: block;
   margin: 10px 0 0 0;
   max-height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  animation: slide-up 0.4s ease; }
 
 .main__chose-section-carousel {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
   width: 95%;
   height: 25%;
   max-height: 125px;
   overflow-x: auto;
   overflow-y: hidden;
-  border: solid grey 1px; }
+  border-bottom: solid grey 1px; }
 
 .main__chose-section-carousel::-webkit-scrollbar {
   width: 0; }
 
 .main__chose-section-carousel-item {
   width: 100px;
+  height: 100%;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   margin: 5px;
   min-height: 100px;
   min-width: 150px;
+  animation: slide-up 0.4s ease;
   background: #707070; }
 
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 .main__chose-section-buttons-section {
   display: flex;
   flex-wrap: wrap;
@@ -147,24 +163,16 @@
   max-height: 125px;
   justify-content: space-between; }
 
-.main__chose-section-buttons-section-button {
-  width: 32%;
-  height: 50px;
-  margin: 5px 0 0 0;
-  border: none;
-  outline: none;
-  opacity: 0.8;
-  transition: 0.2s linear;
-  font-size: 20px;
-  color: #ffffff; }
-
 .confirm-btn {
+  width: 32%;
   background-color: #a9f1a9; }
 
 .undo-btn {
+  width: 32%;
   background-color: #f8e783; }
 
 .reject-btn {
+  width: 32%;
   background-color: #f88383; }
 
 .apply-btn {
@@ -187,7 +195,9 @@
   width: 95%;
   height: 90%;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow-y: auto;
   border-top: solid 1px #575757; }
 
@@ -198,8 +208,7 @@
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button:hover {
-  width: 32%;
+.main__chose-section-buttons-section-button {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -267,7 +276,9 @@
   width: 95%;
   height: 90%;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow-y: auto;
   border-top: solid 1px #575757; }
 
@@ -278,8 +289,7 @@
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button:hover {
-  width: 32%;
+.main__chose-section-buttons-section-button {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -296,6 +306,53 @@
 
 .main__reject-bar-title {
   color: #f88383; }
+
+.main__confirm-bar, .main__reject-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 20%;
+  height: 95%;
+  min-width: 170px;
+  max-width: 250px;
+  background: #636363;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  display: flex;
+  width: 95%;
+  height: 90%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  border-top: solid 1px #575757; }
+
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%;
+  user-select: none; }
+
+.main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
+  display: none; }
+
+.main__chose-section-buttons-section-button {
+  height: 50px;
+  margin: 5px 0 0 0;
+  border: none;
+  outline: none;
+  opacity: 0.8;
+  transition: 0.2s linear;
+  font-size: 20px;
+  color: #ffffff; }
+
+.main__chose-section-buttons-section-button:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.2s linear; }
+
+.settings {
+  display: flex; }
 
 html, body {
   margin: 0;

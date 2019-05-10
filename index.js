@@ -5,7 +5,7 @@ const handlers = require('./server/handlers.js')
 app.use(express.static('static'));
 
 app.get('/api/apply',  (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     handlers.apply(res);    
 });
 

@@ -17,7 +17,7 @@
     justify-content: space-around;
 
     width: 50%;
-    height: 70%;
+    height: 76%;
 
     min-width: 450px;
     min-height: 600px;
@@ -44,14 +44,16 @@
     margin: 10px 0 0 0;
     max-height: 100%;
     max-width: 100%;
+
+    animation: slide-up 0.4s ease;
 }
 
 .main__chose-section-carousel {
     display: flex;
 
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 
     width: 95%;
     height: 25%;
@@ -61,7 +63,7 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    border: solid grey 1px;
+    border-bottom: solid grey 1px;
 }
 
 .main__chose-section-carousel::-webkit-scrollbar { 
@@ -70,14 +72,37 @@
 
 .main__chose-section-carousel-item {
     width: 100px;
+    height: 100%;
+
+    max-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
 
     margin: 5px;
 
     min-height: 100px;
     min-width: 150px; 
 
+    animation: slide-up 0.4s ease;
+
     background: $carousel-item-color;
 }
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .main__chose-section-buttons-section {
     display: flex;
@@ -95,36 +120,22 @@
 }
 
 .main__chose-section-buttons-section-button {
-    width: 32%;
-    height: 50px;
-
-    margin: 5px 0 0 0;
-
-    border: none;
-
-    outline: none;
-
-    opacity: 0.8;
-    transition: 0.2s linear;
-
-    font-size: 20px;
-    color: $text-color;
-}
-
-.main__chose-section-buttons-section-button:hover {
     @extend %template-btn
 }
 
 
 .confirm-btn {
+    width: 32%;
     background-color: $confirm-color;
 }
 
 .undo-btn {
+    width: 32%;
     background-color: $undo-color; 
 }
 
 .reject-btn {
+    width: 32%;
     background-color: $reject-color;
 }
 

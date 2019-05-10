@@ -10,7 +10,8 @@ export default function startLogic(netHand, apply, showAll) {
     // их доставать через undo
     let nodeArr = [];
     
-    btnSection.addEventListener('click', (evt) => {
+    document.addEventListener('click', (evt) => {
+        console.log(evt.target.dataset.section);
         switch (evt.target.dataset.section) {
             case 'confirm' : {
                 confirmHandle();
@@ -143,11 +144,13 @@ export default function startLogic(netHand, apply, showAll) {
             'imgURL' : graphURL,
         })
     
-        console.log(answer); 
+        // console.log(answer); 
     
         netHand.doPost({
             callback(data) {
+                console.log(data);
                 showAll(data);
+                nodeArr = [];
                 rejectBar = document.querySelector('.main__reject-bar-answers');
                 confirmBar = document.querySelector('.main__confirm-bar-answers');
                 carousel = document.querySelector('.main__chose-section-carousel');
