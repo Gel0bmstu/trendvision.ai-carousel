@@ -66,6 +66,12 @@
     border-bottom: solid grey 1px;
 }
 
+// Применить стиль к первому дочернему элементу карусели
+.main__chose-section-carousel > .main__chose-section-carousel-item:nth-child(1) {
+    // background-color: red;
+    // border: solid red 2px;
+}
+
 .main__chose-section-carousel::-webkit-scrollbar { 
     width: 0; 
 }
