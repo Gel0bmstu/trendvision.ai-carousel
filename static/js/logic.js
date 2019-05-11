@@ -6,6 +6,7 @@ import confirmBarView from './views/confirmBarView.js';
 import headerView from './views/headerView.js';
 import rejectBarView from './views/rejectBarView.js';
 import startLogic from './views/mainView.js'
+import settingsView from './views/settingsView.js'
 
 // Импортм модуль фетчей
 const netHand = new NetworkHandler();
@@ -18,7 +19,7 @@ const heeaderRoot = document.querySelector('.header');
 const choseRoot = document.querySelector('.main__chose-section');
 const confirmRoot = document.querySelector('.main__confirm-bar');
 const rejectRoot = document.querySelector('.main__reject-bar');
-// const settingsRoot = document.querySelector('.settings');
+const settingsRoot = document.querySelector('.settings');
 
 // console.log(heeaderRoot, choseRoot,confirmRoot,rejectRoot)
 
@@ -26,7 +27,7 @@ const choseView = new choseSectionView(choseRoot);
 const headerview = new headerView(heeaderRoot);
 const confirmView = new confirmBarView(confirmRoot);
 const rejectView = new rejectBarView(rejectRoot);
-// const settingsView = new settingsView(settingsRoot);
+const settingsview = new settingsView(settingsRoot);
 
 
 headerview.show();

@@ -1,6 +1,6 @@
 import getTemplate from '../components/settingsComponent/settings.js';
 
-export default class settingsViews {
+export default class settingsView {
     constructor(
         root = document.body,
     ) {
@@ -10,5 +10,12 @@ export default class settingsViews {
 
     show() {
         this.root.innerHTML = this.template;
+
+        this.closeBtn = document.querySelector('.settings-close');
+
+        this.closeBtn.addEventListener('click', () => {
+            this.root.innerHTML = '';
+            this.root.style.display = 'none';
+        })
     }
 }

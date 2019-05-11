@@ -10,7 +10,7 @@
 
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
-    background: #636363;
+    background: $tile-color;
 }
 
 .header__container {
@@ -35,7 +35,7 @@
 
 .header__container-hrefs-block {
     display: flex;
-    color: #ffffff;
+    color: $text-color;
 
     font-size: 20px;
     flex-wrap: wrap;
@@ -45,7 +45,7 @@
 }
 
 .header__container-hrefs-block a {
-    color: #ffffff;
+    color: $text-color;
 
     margin-left: 25px;
     text-decoration: none;

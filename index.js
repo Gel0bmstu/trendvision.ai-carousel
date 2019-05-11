@@ -10,6 +10,7 @@ app.get('/api/apply',  (req, res) => {
 });
 
 app.post('/api/apply',  (req, res) => {
+    console.log(req.body);
     handlers.apply(res);
 });
   

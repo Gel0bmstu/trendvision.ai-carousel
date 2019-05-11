@@ -14,6 +14,8 @@ $border-color: #575757;
 $text-color: #ffffff;
 $font-family: Arial, Helvetica, sans-serif;
 
+$animation-duration: 0.4s;
+
 // Стили
 
 // Бары
@@ -84,4 +86,34 @@ $font-family: Arial, Helvetica, sans-serif;
     opacity: 1;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     transition: 0.2s linear;
+}
+
+%template-animation-slide-up {
+    animation: slide-up $animation-duration ease;
+}
+
+%template-animation-slide-down {
+    animation: slide-down $animation-duration ease;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

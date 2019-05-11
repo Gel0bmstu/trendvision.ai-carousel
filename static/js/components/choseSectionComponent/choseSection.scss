@@ -45,7 +45,7 @@
     max-height: 100%;
     max-width: 100%;
 
-    animation: slide-up 0.4s ease;
+    @extend %template-animation-slide-up;
 }
 
 .main__chose-section-carousel {
@@ -78,6 +78,8 @@
 
     display: flex;
 
+    font-size: 30px;
+
     align-items: center;
     justify-content: center;
     color: $text-color;
@@ -89,20 +91,10 @@
 
     animation: slide-up 0.4s ease;
 
+    @extend %template-animation-slide-up;
+
     background: $carousel-item-color;
 }
-
-@keyframes slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 .main__chose-section-buttons-section {
     display: flex;
