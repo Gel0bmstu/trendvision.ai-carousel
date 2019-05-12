@@ -50,6 +50,12 @@
 .main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
   animation: slide-up 0.4s ease; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -64,6 +70,20 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 .main__confirm-bar, .main__reject-bar {
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +136,12 @@
 .main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
   animation: slide-up 0.4s ease; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -130,6 +156,20 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -188,7 +228,6 @@
   margin: 5px;
   min-height: 100px;
   min-width: 150px;
-  animation: slide-up 0.4s ease;
   background: #707070; }
 
 .main__chose-section-buttons-section {
@@ -268,6 +307,12 @@
 .main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
   animation: slide-up 0.4s ease; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -282,7 +327,21 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
-.main__confirm-bar-answers div {
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.main__confirm-bar-answers .main__chose-section-carousel-item {
   background-color: #a9f1a9; }
 
 .main__confirm-bar-title {
@@ -374,6 +433,12 @@
 .main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
   animation: slide-up 0.4s ease; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -388,7 +453,21 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
-.main__reject-bar-answers div {
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.main__reject-bar-answers .main__chose-section-carousel-item {
   background-color: #f88383; }
 
 .main__reject-bar-title {
@@ -446,6 +525,12 @@
 .main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
   animation: slide-up 0.4s ease; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -460,6 +545,20 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 .settings {
   position: absolute;
   display: none;

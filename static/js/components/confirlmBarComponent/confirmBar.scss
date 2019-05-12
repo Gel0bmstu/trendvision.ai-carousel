@@ -8,8 +8,9 @@
     @extend %template-bar-answers;
 }
 
-.main__confirm-bar-answers div {
+.main__confirm-bar-answers .main__chose-section-carousel-item {
     background-color: $confirm-color;
+    @extend %template-animation-slide-left;
 }
 
 .main__confirm-bar-title {

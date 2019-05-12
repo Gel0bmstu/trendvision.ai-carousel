@@ -8,8 +8,9 @@
     @extend %template-bar-answers;
 }
 
-.main__reject-bar-answers div {
+.main__reject-bar-answers .main__chose-section-carousel-item {
     background-color: $reject-color;
+    @extend %template-animation-slide-right;
 }
 
 .main__reject-bar-title {

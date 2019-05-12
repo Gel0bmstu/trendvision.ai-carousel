@@ -95,8 +95,6 @@
     min-height: 100px;
     min-width: 150px; 
 
-    animation: slide-up 0.4s ease;
-
     @extend %template-animation-slide-up;
 
     background: $carousel-item-color;

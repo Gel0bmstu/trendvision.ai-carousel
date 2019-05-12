@@ -6,8 +6,6 @@ export default function startLogic(netHand, apply, showAll) {
     let carousel = document.querySelector('.main__chose-section-carousel');
     let btnSection = document.querySelector('.main__chose-section-buttons-section');
     let graph = document.querySelector('.main__chose-section-graph-image');
-    let scrollConfirm = confirmBar.scrollTop;
-    let scrollReject = rejectBar.scrollTop;
 
     // let settinsBtn = document.querySelector('.');
 
@@ -116,8 +114,6 @@ export default function startLogic(netHand, apply, showAll) {
             return;
         }
     
-        scrollReject = rejectBar.scrollHeight;
-
         let node = {};
     
         node.value = carousel.children[0];
@@ -167,10 +163,6 @@ export default function startLogic(netHand, apply, showAll) {
                 carousel = document.querySelector('.main__chose-section-carousel');
                 btnSection = document.querySelector('.main__chose-section-buttons-section');
                 graph = document.querySelector('.main__chose-section-graph-image');
-
-                scrollConfirm = confirmBar.scrollTop;
-                scrollReject = rejectBar.scrollTop;
-
             },
             path : apply,
             body : answer,

@@ -102,6 +102,14 @@ $animation-duration: 0.4s;
     animation: slide-down $animation-duration ease;
 }
 
+%template-animation-slide-left {
+    animation: slide-left $animation-duration ease;
+}
+
+%template-animation-slide-right {
+    animation: slide-right $animation-duration ease;
+}
+
 @keyframes slide-up {
     0% {
         opacity: 0;
@@ -121,5 +129,27 @@ $animation-duration: 0.4s;
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
