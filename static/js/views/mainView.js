@@ -1,16 +1,19 @@
 export default function startLogic(netHand, apply, showAll) {
 
+    let main = document.querySelector('.main');
     let rejectBar = document.querySelector('.main__reject-bar-answers');
     let confirmBar = document.querySelector('.main__confirm-bar-answers');
     let carousel = document.querySelector('.main__chose-section-carousel');
     let btnSection = document.querySelector('.main__chose-section-buttons-section');
     let graph = document.querySelector('.main__chose-section-graph-image');
     
+    // let settinsBtn = document.querySelector('.');
+
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
     // их доставать через undo
     let nodeArr = [];
     
-    document.addEventListener('click', (evt) => {
+    main.addEventListener('click', (evt) => {
         console.log(evt.target.dataset.section);
         switch (evt.target.dataset.section) {
             case 'confirm' : {
@@ -31,6 +34,10 @@ export default function startLogic(netHand, apply, showAll) {
             }
         }
     });
+
+
+    // settingsview.show();
+
     
     document.addEventListener('keydown', (evt) => {
         console.log(evt.keyCode);
@@ -139,16 +146,16 @@ export default function startLogic(netHand, apply, showAll) {
         }
     
         let answer = JSON.stringify({
-            'rejected' : rejected,
-            'confirmed' : confirmed,
-            'imgURL' : graphURL,
-        })
+            rejected : rejected,
+            confirmed : confirmed,
+            imgURL : graphURL,
+        });
     
-        // console.log(answer); 
+        console.log(answer); 
     
         netHand.doPost({
             callback(data) {
-                console.log(data);
+                console.log("to-get: ", data);
                 showAll(data);
                 nodeArr = [];
                 rejectBar = document.querySelector('.main__reject-bar-answers');
@@ -158,7 +165,7 @@ export default function startLogic(netHand, apply, showAll) {
                 graph = document.querySelector('.main__chose-section-graph-image');
             },
             path : apply,
-            body : answer
+            body : answer,
         })
     }
 }
