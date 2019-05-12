@@ -8,6 +8,10 @@
     @extend %template-bar-answers;
 }
 
+.main__reject-bar-answers div {
+    background-color: $reject-color;
+}
+
 .main__reject-bar-title {
     @extend %template-bar-title;
     color: $reject-color;

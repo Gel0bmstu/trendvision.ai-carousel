@@ -11,7 +11,16 @@ const tags = [
     'oil',
     'euro/usd',
     'shugar',
-    'gas'
+    'gas',
+    'platina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
+    'huyatina',
 ]
 
 exports.apply = (res) => {

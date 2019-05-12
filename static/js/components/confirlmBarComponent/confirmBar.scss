@@ -8,6 +8,10 @@
     @extend %template-bar-answers;
 }
 
+.main__confirm-bar-answers div {
+    background-color: $confirm-color;
+}
+
 .main__confirm-bar-title {
     @extend %template-bar-title;
     color: $confirm-color;

@@ -1,4 +1,5 @@
 sass-cash/
 node_modules/
+.vscode/
 
 *.scss

@@ -10,15 +10,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .main__confirm-bar-answers, .main__reject-bar-answers {
-  display: flex;
+  display: inline-block;
   width: 95%;
-  height: 90%;
+  height: 89%;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: solid 1px #575757; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%;
@@ -71,15 +76,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .main__confirm-bar-answers, .main__reject-bar-answers {
-  display: flex;
+  display: inline-block;
   width: 95%;
-  height: 90%;
+  height: 89%;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: solid 1px #575757; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%;
@@ -218,15 +228,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .main__confirm-bar-answers, .main__reject-bar-answers {
-  display: flex;
+  display: inline-block;
   width: 95%;
-  height: 90%;
+  height: 89%;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: solid 1px #575757; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%;
@@ -267,6 +282,9 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
+.main__confirm-bar-answers div {
+  background-color: #a9f1a9; }
+
 .main__confirm-bar-title {
   color: #a9f1a9; }
 
@@ -316,15 +334,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .main__confirm-bar-answers, .main__reject-bar-answers {
-  display: flex;
+  display: inline-block;
   width: 95%;
-  height: 90%;
+  height: 89%;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: solid 1px #575757; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%;
@@ -365,6 +388,9 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
+.main__reject-bar-answers div {
+  background-color: #f88383; }
+
 .main__reject-bar-title {
   color: #f88383; }
 
@@ -380,15 +406,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .main__confirm-bar-answers, .main__reject-bar-answers {
-  display: flex;
+  display: inline-block;
   width: 95%;
-  height: 90%;
+  height: 89%;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: solid 1px #575757; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%;
