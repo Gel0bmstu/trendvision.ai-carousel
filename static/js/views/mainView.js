@@ -14,7 +14,6 @@ export default function startLogic(netHand, apply, showAll) {
     let nodeArr = [];
     
     main.addEventListener('click', (evt) => {
-        console.log(evt.target.dataset.section);
         switch (evt.target.dataset.section) {
             case 'confirm' : {
                 confirmHandle();
@@ -35,9 +34,35 @@ export default function startLogic(netHand, apply, showAll) {
         }
     });
 
+    // Функция удавозвращения в карусель по клику на тэг
+    const forceUndo = (bar, evt) => {
+        if (evt.target.className == 'main__chose-section-carousel-item') {
+            bar.removeChild(evt.target);
+            carousel.insertBefore(evt.target, carousel.children[0]); 
+            
+            for (let i = 0; i < nodeArr.length; i++) {
+                if (nodeArr[i].value == evt.target) {
+                    nodeArr.splice(i ,1);
+                }
+            }
+        } else if (evt.target.parentNode.className == 'main__chose-section-carousel-item') {
+            bar.removeChild(evt.target.parentNode);
+            carousel.insertBefore(evt.target.parentNode, carousel.children[0]);   
+            
+            for (let i = 0; i < nodeArr.length; i++) {
+                if (nodeArr[i].value == evt.target.parentNode) {
+                    nodeArr.splice(i ,1);
+                }
+            }
+        }
+    } 
 
-    // settingsview.show();
-
+    confirmBar.addEventListener('click', function callback(evt) {
+        forceUndo(this, evt);
+    });
+    rejectBar.addEventListener('click', function callback(evt) {
+        forceUndo(this, evt)
+    })
     
     document.addEventListener('keydown', (evt) => {
         console.log(evt.keyCode);
@@ -163,6 +188,13 @@ export default function startLogic(netHand, apply, showAll) {
                 carousel = document.querySelector('.main__chose-section-carousel');
                 btnSection = document.querySelector('.main__chose-section-buttons-section');
                 graph = document.querySelector('.main__chose-section-graph-image');
+
+                confirmBar.addEventListener('click', function callback(evt) {
+                    forceUndo(this, evt);
+                });
+                rejectBar.addEventListener('click', function callback(evt) {
+                    forceUndo(this, evt)
+                })
             },
             path : apply,
             body : answer,
