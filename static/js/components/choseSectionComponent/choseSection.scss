@@ -45,6 +45,8 @@
     max-height: 100%;
     max-width: 100%;
 
+    pointer-events: none;
+
     @extend %template-animation-slide-up;
 }
 

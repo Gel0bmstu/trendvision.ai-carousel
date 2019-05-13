@@ -5,8 +5,9 @@ import choseSectionView from './views/choseSectionView.js';
 import confirmBarView from './views/confirmBarView.js';
 import headerView from './views/headerView.js';
 import rejectBarView from './views/rejectBarView.js';
-import startLogic from './views/mainView.js'
-import settingsView from './views/settingsView.js'
+import startLogic from './views/mainView.js';
+import settingsView from './views/settingsView.js';
+import uploadView from './views/uploadView.js';
 
 // Импортм модуль фетчей
 const netHand = new NetworkHandler();
@@ -20,6 +21,7 @@ const choseRoot = document.querySelector('.main__chose-section');
 const confirmRoot = document.querySelector('.main__confirm-bar');
 const rejectRoot = document.querySelector('.main__reject-bar');
 const settingsRoot = document.querySelector('.settings');
+const uploadRoot = document.querySelector('.upload');
 
 // console.log(heeaderRoot, choseRoot,confirmRoot,rejectRoot)
 
@@ -28,6 +30,8 @@ const headerview = new headerView(heeaderRoot);
 const confirmView = new confirmBarView(confirmRoot);
 const rejectView = new rejectBarView(rejectRoot);
 const settingsview = new settingsView(settingsRoot);
+const uploadview = new uploadView(uploadRoot);
+
 
 
 headerview.show();
@@ -36,6 +40,7 @@ function showAll(res) {
     choseView.show(res);
     confirmView.show();
     rejectView.show();
+    uploadview.show();
 }
 
 // Инициирующий запрос за первым графиком и тегами

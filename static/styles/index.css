@@ -18,21 +18,25 @@
   justify-content: start;
   align-items: center;
   overflow-y: scroll;
-  border-top: solid 1px #575757; }
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers div, .main__reject-bar-answers div {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; }
 
-.main__confirm-bar-title, .main__reject-bar-title {
-  height: 10%;
-  user-select: none; }
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn {
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -42,12 +46,12 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
 
-.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
   animation: slide-up 0.4s ease; }
 
 .main__confirm-bar-answers .main__chose-section-carousel-item {
@@ -104,21 +108,25 @@
   justify-content: start;
   align-items: center;
   overflow-y: scroll;
-  border-top: solid 1px #575757; }
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers div, .main__reject-bar-answers div {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; }
 
-.main__confirm-bar-title, .main__reject-bar-title {
-  height: 10%;
-  user-select: none; }
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn {
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -128,12 +136,12 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
 
-.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
   animation: slide-up 0.4s ease; }
 
 .main__confirm-bar-answers .main__chose-section-carousel-item {
@@ -200,7 +208,8 @@
   display: block;
   margin: 10px 0 0 0;
   max-height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  pointer-events: none; }
 
 .main__chose-section-carousel {
   display: flex;
@@ -275,21 +284,25 @@
   justify-content: start;
   align-items: center;
   overflow-y: scroll;
-  border-top: solid 1px #575757; }
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers div, .main__reject-bar-answers div {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; }
 
-.main__confirm-bar-title, .main__reject-bar-title {
-  height: 10%;
-  user-select: none; }
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn {
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -299,12 +312,12 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
 
-.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
   animation: slide-up 0.4s ease; }
 
 .main__confirm-bar-answers .main__chose-section-carousel-item {
@@ -401,21 +414,25 @@
   justify-content: start;
   align-items: center;
   overflow-y: scroll;
-  border-top: solid 1px #575757; }
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers div, .main__reject-bar-answers div {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; }
 
-.main__confirm-bar-title, .main__reject-bar-title {
-  height: 10%;
-  user-select: none; }
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn {
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -425,12 +442,12 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
 
-.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
   animation: slide-up 0.4s ease; }
 
 .main__confirm-bar-answers .main__chose-section-carousel-item {
@@ -493,21 +510,25 @@
   justify-content: start;
   align-items: center;
   overflow-y: scroll;
-  border-top: solid 1px #575757; }
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers div, .main__reject-bar-answers div {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; }
 
-.main__confirm-bar-title, .main__reject-bar-title {
-  height: 10%;
-  user-select: none; }
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
 
 .main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
   display: none; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn {
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -517,12 +538,12 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
 
-.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings {
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
   animation: slide-up 0.4s ease; }
 
 .main__confirm-bar-answers .main__chose-section-carousel-item {
@@ -616,10 +637,162 @@
   margin: 5px 0 0 0;
   color: #ffffff; }
 
+.main__confirm-bar, .main__reject-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 20%;
+  height: 95%;
+  min-width: 170px;
+  max-width: 250px;
+  background: #636363;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  display: inline-block;
+  width: 95%;
+  height: 89%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  overflow-y: scroll;
+  border-top: solid 1px #575757;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
+
+.main__confirm-bar-answers div, .main__reject-bar-answers div {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.main__confirm-bar-answers, .main__reject-bar-answers {
+  -ms-overflow-style: none; }
+
+.main__confirm-bar-answers::-webkit-scrollbar, .main__reject-bar-answers::-webkit-scrollbar {
+  display: none; }
+
+.main__confirm-bar-title, .main__reject-bar-title {
+  height: 10%; }
+
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+  height: 50px;
+  margin: 5px 0 0 0;
+  border: none;
+  outline: none;
+  opacity: 0.8;
+  transition: 0.2s linear;
+  font-size: 20px;
+  color: #ffffff; }
+
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.2s linear; }
+
+.main__chose-section-graph-image, .main__chose-section-carousel-item, .settings, .upload {
+  animation: slide-up 0.4s ease; }
+
+.main__confirm-bar-answers .main__chose-section-carousel-item {
+  animation: slide-left 0.4s ease; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item {
+  animation: slide-right 0.4s ease; }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.upload {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  background: #636363;
+  width: 600px;
+  height: 400px;
+  margin: 15% 30% 0 30%;
+  justify-content: space-around;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2; }
+
+.upload-close {
+  width: 10%;
+  height: 10%;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 10px;
+  text-decoration: none; }
+
+.upload-title {
+  width: 90%;
+  height: 10%;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 10px;
+  text-decoration: none; }
+
+.upload-section-send-btn {
+  background-color: #83e1f8; }
+
+.upload-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 40%;
+  justify-content: space-around;
+  align-items: center; }
+
+.upload-section-input {
+  width: 95%;
+  justify-content: center; }
+
+.upload-section-send-btn {
+  width: 95%; }
+
+.upload-apply-btn {
+  width: 50%;
+  background: #a9f1a9; }
+
+.upload__inputs-section-tip {
+  width: 100%;
+  margin: 5px 0 0 0;
+  color: #ffffff; }
+
 html, body {
   margin: 0;
   overflow: hidden;
   background: #575757;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  scrollbar-width: none; }
 
 /*# sourceMappingURL=index.css.map */

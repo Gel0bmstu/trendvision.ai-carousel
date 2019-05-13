@@ -5,6 +5,7 @@
 @import '../js/components/headerComponent/header.scss';
 @import '../js/components/rejectBarComponent/rejectBar.scss';
 @import '../js/components/settingsComponent/settings.scss';
+@import '../js/components/uploadComponent/upload.scss';
 
 html, body {
     margin: 0;
@@ -12,4 +13,7 @@ html, body {
     background: $background-color;
 
     font-family: $font-family;
+
+    user-select: none;
+    scrollbar-width: none;
 }

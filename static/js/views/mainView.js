@@ -7,6 +7,13 @@ export default function startLogic(netHand, apply, showAll) {
     let btnSection = document.querySelector('.main__chose-section-buttons-section');
     let graph = document.querySelector('.main__chose-section-graph-image');
 
+    let uploadButton = document.querySelector('.header__container-hrefs-block-upload');
+    let upload = document.querySelector('.upload');
+
+    uploadButton.addEventListener('click', () => {
+        upload.style.display = 'flex';
+    })
+
     // let settinsBtn = document.querySelector('.');
 
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
@@ -33,6 +40,66 @@ export default function startLogic(netHand, apply, showAll) {
             }
         }
     });
+
+    const dargAndDrop = (elem, e) => {
+        console.log('Take!')
+
+        let coords = getCoords(elem);
+        let shiftX = e.pageX - coords.left;
+        let shiftY = e.pageY - coords.top;
+
+        elem.style.position = 'absolute';
+        // document.body.appendChild(elem);
+        moveAt(e);
+        
+        elem.style.zIndex = 2; // над другими элементами
+        
+        function moveAt(e) {
+            elem.style.left = e.pageX - coords.left + 'px';
+            elem.style.top = e.pageY - coords.top + 'px';
+        }
+        
+        document.onmousemove = function(e) {
+            moveAt(e);
+        };
+        
+        elem.onmouseup = function() {
+            const cnfrm = confirmBar.getBoundingClientRect();
+
+            console.log(e.pageX + shiftX, cnfrm.left, cnfrm.right)
+
+
+            if (e.clientX >= cnfrm.left && e.clientX <= cnfrm.right) {
+                console.log('IN CONFIRM!')
+            }
+
+            elem.onmouseup = null;
+            document.onmousemove = null;
+
+        };
+        
+        
+        elem.ondragstart = function() {
+            return false;
+        };
+        
+        function getCoords(elem) {   // кроме IE8-
+        const box = getPosition(elem);
+            return {
+                top: e.pageX - box.x,
+                left: e.pageY - box.y
+            };
+        }
+    } 
+
+    document.onmousedown = (evt) => {
+        console.log(evt.className);
+        if (evt.target.className == 'main__chose-section-carousel-item') {
+            dargAndDrop(evt.target, evt);
+        } else if (evt.target.parentNode.className == 'main__chose-section-carousel-item') {
+            dargAndDrop(evt.target.parentNode, evt);
+        }
+    }
 
     // Функция удавозвращения в карусель по клику на тэг
     const forceUndo = (bar, evt) => {

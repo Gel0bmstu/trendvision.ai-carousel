@@ -1,3 +1,5 @@
+// Подрубаем для скрытия скроллбара в ff
+
 // Переменные
 $background-color: #575757;
 $tile-color: #636363;
@@ -51,6 +53,8 @@ $animation-duration: 0.4s;
     overflow-y: scroll;
 
     border-top: solid 1px $border-color;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
 }
 
 %template-bar-answers div {
@@ -59,14 +63,27 @@ $animation-duration: 0.4s;
     margin-right: auto;
 }
 
-%template-bar-title {
-    height: 10%;
-
-    user-select: none;
+%template-bar-answers {
+    -ms-overflow-style: none;
 }
 
+// Тщетные попытки убрать скролл в ff
+// %template-bar-answers {
+//     overflow: -moz-scrollbars-none;
+// }
+
+// %template-bar-answers::-moz-scrollbar {
+//     width: 0px;
+//     height: 0px;
+// }
+
+// - скролл в хроме
 %template-bar-answers::-webkit-scrollbar { 
     display: none;
+}
+
+%template-bar-title {
+    height: 10%;
 }
 
 // Кпонки
