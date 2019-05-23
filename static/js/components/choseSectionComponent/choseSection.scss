@@ -102,6 +102,12 @@
     background: $carousel-item-color;
 }
 
+.main__chose-section-carousel-item p {
+    width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 .main__chose-section-buttons-section {
     display: flex;
     flex-wrap: wrap;
