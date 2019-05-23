@@ -362,6 +362,11 @@
 .main__confirm-bar-answers .main__chose-section-carousel-item {
   background-color: #a9f1a9; }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item p {
+  width: 90%;
+  text-align: center;
+  word-wrap: break-word; }
+
 .main__confirm-bar-title {
   color: #a9f1a9; }
 
@@ -491,6 +496,11 @@
     transform: translateX(0); } }
 .main__reject-bar-answers .main__chose-section-carousel-item {
   background-color: #f88383; }
+
+.main__reject-bar-answers .main__chose-section-carousel-item p {
+  width: 90%;
+  text-align: center;
+  word-wrap: break-word; }
 
 .main__reject-bar-title {
   color: #f88383; }

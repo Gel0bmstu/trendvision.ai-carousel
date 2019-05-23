@@ -13,6 +13,12 @@
     @extend %template-animation-slide-left;
 }
 
+.main__confirm-bar-answers .main__chose-section-carousel-item p {
+    width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 .main__confirm-bar-title {
     @extend %template-bar-title;
     color: $confirm-color;
