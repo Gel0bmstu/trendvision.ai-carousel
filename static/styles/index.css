@@ -744,7 +744,7 @@
     transform: translateX(0); } }
 .upload {
   position: absolute;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   background: #636363;
   width: 600px;
