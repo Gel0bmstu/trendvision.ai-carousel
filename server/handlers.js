@@ -15,12 +15,12 @@ const tags = [
     'platina',
     'sfjsdfsddfsdsfs',
     'qqqqqqqqqqqqq',
-    'xzcvxcvxcvxcvxzcvzxcvxcvxccvzxkvxzcvxcjkv',
-    'huyatina',
-    'huyatina',
-    'huyatina',
-    'huyatina',
-    'huyatina',
+    'aaaaaaaaaaaaaaaaaaaaaaaa',
+    'anothertag',
+    'and again',
+    'some text tag',
+    'yeap, atoher test',
+    'thi is the test too',
 ]
 
 exports.apply = (res) => {

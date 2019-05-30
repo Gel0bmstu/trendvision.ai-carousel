@@ -227,7 +227,10 @@ export default function startLogic(netHand, apply, showAll) {
                     forceUndo(this, evt);
                 });
                 rejectBar.addEventListener('click', function callback(evt) {
-                    forceUndo(this, evt)
+                    forceUndo(this, evt);
+                })
+                carousel.addEventListener('click', function callback(evt) {
+                    forceConfirm(this, evt);
                 })
             },
             path : apply,
