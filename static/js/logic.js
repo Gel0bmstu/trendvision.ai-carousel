@@ -13,8 +13,8 @@ import uploadView from './views/uploadView.js';
 const netHand = new NetworkHandler();
 
 // Задаем пути для общения с бэком
-let apply = '/api/apply';
-let initial = '/api/apply';
+let apply = '/api/apply';   // То, куда отправляются размеченные тэги
+let initial = '/api/apply'; // Инициирующий запрос на бэк
 
 const heeaderRoot = document.querySelector('.header');
 const choseRoot = document.querySelector('.main__chose-section');

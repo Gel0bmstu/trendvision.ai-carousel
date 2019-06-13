@@ -8,10 +8,10 @@ export default function startLogic(netHand, apply, showAll) {
     let graph = document.querySelector('.main__chose-section-graph-image');
 
     let uploadButton = document.querySelector('.header__container-hrefs-block-upload');
-    let upload = document.querySelector('.upload');
+    let uploadRoot = document.querySelector('.upload');
 
     uploadButton.addEventListener('click', () => {
-        upload.style.display = 'flex';
+        uploadRoot.style.display = 'flex';
     })
 
     // let settinsBtn = document.querySelector('.');
@@ -222,6 +222,9 @@ export default function startLogic(netHand, apply, showAll) {
                 carousel = document.querySelector('.main__chose-section-carousel');
                 btnSection = document.querySelector('.main__chose-section-buttons-section');
                 graph = document.querySelector('.main__chose-section-graph-image');
+                
+                uploadRoot = document.querySelector('.upload');
+                uploadButton = document.querySelector('.header__container-hrefs-block-upload');
 
                 confirmBar.addEventListener('click', function callback(evt) {
                     forceUndo(this, evt);
@@ -230,7 +233,10 @@ export default function startLogic(netHand, apply, showAll) {
                     forceUndo(this, evt);
                 })
                 carousel.addEventListener('click', function callback(evt) {
-                    forceConfirm(this, evt);
+                    forceConfirm(this, evst);
+                })
+                uploadButton.addEventListener('click', () => {
+                    uploadRoot.style.display = 'flex';
                 })
             },
             path : apply,
