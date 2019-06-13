@@ -233,7 +233,7 @@ export default function startLogic(netHand, apply, showAll) {
                     forceUndo(this, evt);
                 })
                 carousel.addEventListener('click', function callback(evt) {
-                    forceConfirm(this, evst);
+                    forceConfirm(this, evt);
                 })
                 uploadButton.addEventListener('click', () => {
                     uploadRoot.style.display = 'flex';
