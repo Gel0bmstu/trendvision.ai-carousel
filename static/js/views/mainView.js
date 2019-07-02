@@ -8,18 +8,24 @@ export default function startLogic(netHand, apply, showAll) {
     let graph = document.querySelector('.main__chose-section-graph-image');
 
     let uploadButton = document.querySelector('.header__container-hrefs-block-upload');
-    let uploadRoot = document.querySelector('.upload');
+    let uploadSection = document.querySelector('.upload');
+
+    let settingsButton = document.querySelector('.header__container-hrefs-block-settings');
+    let settingsSection = document.querySelector('.settings');
+    let sendSettingsButton = document.querySelector('.settings-apply-btn');
 
     uploadButton.addEventListener('click', () => {
-        uploadRoot.style.display = 'flex';
+        uploadSection.style.display = 'flex';
     })
 
-    // let settinsBtn = document.querySelector('.');
+    settingsButton.addEventListener('click', () => {
+        settingsSection.style.display = 'flex';
+    })
 
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
     // их доставать через undo
     let nodeArr = [];
-    
+
     main.addEventListener('click', (evt) => {
         switch (evt.target.dataset.section) {
             case 'confirm' : {
@@ -101,28 +107,41 @@ export default function startLogic(netHand, apply, showAll) {
     document.addEventListener('keydown', (evt) => {
         console.log(evt.keyCode);
         switch (evt.keyCode) {
-            case 37 : {
-                confirmHandle();
+            case 13 : {
+                applyHandle();
                 break;
             }
             case 17 : {
                 undoHanddle();
                 break;
             }
+            case 27 : {
+                closeAllUpWindows(); 
+                break;
+            }
+            case 37 : {
+                confirmHandle();
+                break;
+            }
             case 39 : {
                 rejectHandle();
                 break;
             }
-            case 13 : {
-                applyHandle();
-                break;
-            }
             case 68 : {
+                console.log("------------DEBUG MODE-------------");
                 console.log("nodes", carousel.childNodes);
-                console.log("chill=", carousel.children);            
+                console.log("childs", carousel.children);            
             }
         }
     })
+
+    const closeAllUpWindows = () => {
+        if (uploadSection.style.display == 'flex') {
+            uploadSection.style.display = 'none'
+        } else if (settingsSection.style.display == 'flex') {
+            settingsSection.style.display = 'none';
+        }
+    }
     
     const confirmHandle = () => {
     
@@ -135,11 +154,6 @@ export default function startLogic(netHand, apply, showAll) {
     
         node.value = carousel.children[0];
         node.status = 'confirm';
-    
-        // if (node.localName != 'div') {
-        //     carousel.removeChild(node.value);
-        //     node.value = carousel.firstChild;
-        // }
     
         carousel.removeChild(node.value);
     
@@ -178,11 +192,6 @@ export default function startLogic(netHand, apply, showAll) {
         node.value = carousel.children[0];
         node.status = 'reject';
     
-        // if (node.localName != 'div') {
-        //     carousel.removeChild(node.value);
-        //     node.value = carousel.firstChild;
-        // }
-    
         carousel.removeChild(node.value);
     
         rejectBar.appendChild(node.value);
@@ -191,6 +200,37 @@ export default function startLogic(netHand, apply, showAll) {
         rejectBar.scrollTo(0, rejectBar.scrollHeight)
     }
     
+    const sendSettings = () => {
+
+        console.log("davai")
+
+        let settingsList = {}
+        let data = {
+            "settings" : [],
+        };
+
+        settingsList["currency"] = document.querySelector('.currency').checked;
+        settingsList["gems"] = document.querySelector('.gems').checked;
+        settingsList["companies"] = document.querySelector('.companies').checked;
+
+        for (let key in settingsList) {
+            if (settingsList[key]) {
+                data["settings"].push(key)
+            }
+        }
+
+
+
+        netHand.doPost({
+            path : '/api/settings',
+            body : JSON.stringify(data),
+        })    
+    }
+
+    sendSettingsButton.addEventListener('click', () => {    
+        sendSettings();
+    });
+
     const applyHandle = () => {
         let rejected = [];
         let confirmed = [];
@@ -210,11 +250,8 @@ export default function startLogic(netHand, apply, showAll) {
             imgURL : graphURL,
         });
     
-        console.log(answer); 
-    
         netHand.doPost({
             callback(data) {
-                console.log("to-get: ", data);
                 showAll(data);
                 nodeArr = [];
                 rejectBar = document.querySelector('.main__reject-bar-answers');
@@ -223,8 +260,11 @@ export default function startLogic(netHand, apply, showAll) {
                 btnSection = document.querySelector('.main__chose-section-buttons-section');
                 graph = document.querySelector('.main__chose-section-graph-image');
                 
-                uploadRoot = document.querySelector('.upload');
+                uploadSection = document.querySelector('.upload');
                 uploadButton = document.querySelector('.header__container-hrefs-block-upload');
+
+                settingsButton = document.querySelector('.header__container-hrefs-block-settings');
+                settingsSection = document.querySelector('.settings');
 
                 confirmBar.addEventListener('click', function callback(evt) {
                     forceUndo(this, evt);
@@ -236,8 +276,11 @@ export default function startLogic(netHand, apply, showAll) {
                     forceConfirm(this, evt);
                 })
                 uploadButton.addEventListener('click', () => {
-                    uploadRoot.style.display = 'flex';
+                    uploadSection.style.display = 'flex';
                 })
+                sendSettingsButton.addEventListener('click', () => {    
+                    sendSettings();
+                });
             },
             path : apply,
             body : answer,

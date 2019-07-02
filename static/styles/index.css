@@ -36,7 +36,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -46,7 +46,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -126,7 +126,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -136,7 +136,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -307,7 +307,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -317,7 +317,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -442,7 +442,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -452,7 +452,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -543,7 +543,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -553,7 +553,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -602,16 +602,19 @@
   background: #636363;
   width: 600px;
   height: 400px;
-  margin: 30vh auto auto auto;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -300px;
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1; }
+  z-index: 2; }
 
 .settings-close {
-  width: 20%;
+  width: 10%;
   height: 10%;
   justify-content: space-around;
   align-content: center;
+  text-align: center;
   font-size: 40px;
   color: #ffffff;
   margin-top: 10px;
@@ -619,8 +622,10 @@
 
 .settings-title {
   width: 80%;
+  padding-right: 10%;
   height: 10%;
   justify-content: center;
+  text-align: center;
   font-size: 40px;
   color: #ffffff;
   margin-top: 10px;
@@ -629,12 +634,13 @@
 .settings__inputs-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   width: 95%;
-  height: 60%; }
+  height: 50%; }
 
 .settings__inputs-section-input {
-  width: 100%;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   outline: none;
   font-size: 20px;
   color: #ffffff;
@@ -648,9 +654,11 @@
   background: #a9f1a9; }
 
 .settings__inputs-section-tip {
-  width: 100%;
+  width: 70%;
+  height: 30px;
   margin: 5px 0 0 0;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 25px; }
 
 .main__confirm-bar, .main__reject-bar {
   display: flex;
@@ -690,7 +698,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -700,7 +708,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -749,7 +757,9 @@
   background: #636363;
   width: 600px;
   height: 400px;
-  margin: 15% 30% 0 30%;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -300px;
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 2; }
@@ -766,7 +776,8 @@
   text-decoration: none; }
 
 .upload-title {
-  width: 90%;
+  width: 80%;
+  padding-right: 10%;
   height: 10%;
   justify-content: center;
   text-align: center;
@@ -775,8 +786,9 @@
   margin-top: 10px;
   text-decoration: none; }
 
-.upload-section-send-btn {
-  background-color: #83e1f8; }
+.upload__input-form-section-send-btn {
+  background-color: #83e1f8;
+  width: 100%; }
 
 .upload-section {
   display: flex;
@@ -786,12 +798,9 @@
   justify-content: space-around;
   align-items: center; }
 
-.upload-section-input {
+.upload__input-form-section-file {
   width: 95%;
   justify-content: center; }
-
-.upload-section-send-btn {
-  width: 95%; }
 
 .upload-apply-btn {
   width: 50%;
@@ -802,12 +811,25 @@
   margin: 5px 0 0 0;
   color: #ffffff; }
 
+.upload__input-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 150px; }
+
+.upload__input-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto; }
+
 html, body {
   margin: 0;
   overflow: hidden;
   background: #575757;
   font-family: Arial, Helvetica, sans-serif;
   user-select: none;
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  min-width: 950px; }
 
 /*# sourceMappingURL=index.css.map */

@@ -41,6 +41,7 @@ function showAll(res) {
     confirmView.show();
     rejectView.show();
     uploadview.show();
+    settingsview.show();
 }
 
 // Инициирующий запрос за первым графиком и тегами
