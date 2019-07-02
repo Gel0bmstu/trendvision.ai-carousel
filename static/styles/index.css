@@ -36,7 +36,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -46,7 +46,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -126,7 +126,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -136,7 +136,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -307,7 +307,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -317,7 +317,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -442,7 +442,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -452,7 +452,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -543,7 +543,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -553,7 +553,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -698,7 +698,7 @@
 .main__confirm-bar-title, .main__reject-bar-title {
   height: 10%; }
 
-.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload-section-input input, .upload-apply-btn {
+.main__chose-section-buttons-section-button, .settings-apply-btn, .upload__input-form-section-send-btn, .upload__input-form-save-btn, .upload-section-input input, .upload-apply-btn {
   height: 50px;
   margin: 5px 0 0 0;
   border: none;
@@ -708,7 +708,7 @@
   font-size: 20px;
   color: #ffffff; }
 
-.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
+.main__chose-section-buttons-section-button:hover, .settings-apply-btn:hover, .upload__input-form-section-send-btn:hover, .upload__input-form-save-btn:hover, .upload-section-input input:hover, .upload-apply-btn:hover {
   opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: 0.2s linear; }
@@ -790,6 +790,17 @@
   background-color: #83e1f8;
   width: 100%; }
 
+.upload__input-form-save-btn {
+  background-color: #a9f1a9;
+  width: 100%; }
+
+.upload__input-form-hr {
+  width: 95%;
+  color: #575757;
+  background-color: #575757;
+  border: none;
+  margin: 5px 0 2px 0; }
+
 .upload-section {
   display: flex;
   flex-wrap: wrap;
@@ -814,6 +825,8 @@
 .upload__input-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin: -75px 0 0 0;
   width: 60%;
   height: 150px; }
 

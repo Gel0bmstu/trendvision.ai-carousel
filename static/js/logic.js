@@ -15,6 +15,8 @@ const netHand = new NetworkHandler();
 // Задаем пути для общения с бэком
 let apply = '/api/apply';   // То, куда отправляются размеченные тэги
 let initial = '/api/apply'; // Инициирующий запрос на бэк
+let results = '/api/results'; // Скачать CVS с бэка
+let settingsPath = '/api/settings'; // Отдать конфигурацию клиента (чекбоксы настроек) на бэк
 
 const heeaderRoot = document.querySelector('.header');
 const choseRoot = document.querySelector('.main__chose-section');
@@ -52,7 +54,7 @@ netHand.doGet({
         showAll(res)
     
         // запускаем логику
-        startLogic(netHand, apply, showAll);
+        startLogic(netHand, apply, results, settingsPath, showAll);
     },
     path: initial,
 })

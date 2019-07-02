@@ -1,4 +1,13 @@
-export default function startLogic(netHand, apply, showAll) {
+export default function startLogic(
+    // Нетворк хендлер
+    netHand, 
+    
+    // Пути
+    apply,
+    results,
+    settingsPath,
+
+    showAll) {
 
     let main = document.querySelector('.main');
     let rejectBar = document.querySelector('.main__reject-bar-answers');
@@ -9,6 +18,7 @@ export default function startLogic(netHand, apply, showAll) {
 
     let uploadButton = document.querySelector('.header__container-hrefs-block-upload');
     let uploadSection = document.querySelector('.upload');
+    let uploadSaveButton = document.querySelector('.upload__input-form-save-btn');
 
     let settingsButton = document.querySelector('.header__container-hrefs-block-settings');
     let settingsSection = document.querySelector('.settings');
@@ -46,6 +56,12 @@ export default function startLogic(netHand, apply, showAll) {
             }
         }
     });
+
+    uploadSaveButton.addEventListener('click', () => {
+        netHand.doGet({
+            path : results,
+        }) 
+    })
 
     // Функция удавозвращения в карусель по клику на тэг
     const forceUndo = (bar, evt) => {
@@ -222,7 +238,7 @@ export default function startLogic(netHand, apply, showAll) {
 
 
         netHand.doPost({
-            path : '/api/settings',
+            path : settingsPath,
             body : JSON.stringify(data),
         })    
     }
