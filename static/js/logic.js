@@ -8,6 +8,7 @@ import rejectBarView from './views/rejectBarView.js';
 import startLogic from './views/mainView.js';
 import settingsView from './views/settingsView.js';
 import uploadView from './views/uploadView.js';
+import statisticView from './views/statisticView.js';
 
 // Импортм модуль фетчей
 const netHand = new NetworkHandler();
@@ -24,6 +25,8 @@ const confirmRoot = document.querySelector('.main__confirm-bar');
 const rejectRoot = document.querySelector('.main__reject-bar');
 const settingsRoot = document.querySelector('.settings');
 const uploadRoot = document.querySelector('.upload');
+const statisticRoot = document.querySelector('.statistic');
+
 
 // console.log(heeaderRoot, choseRoot,confirmRoot,rejectRoot)
 
@@ -33,6 +36,7 @@ const confirmView = new confirmBarView(confirmRoot);
 const rejectView = new rejectBarView(rejectRoot);
 const settingsview = new settingsView(settingsRoot);
 const uploadview = new uploadView(uploadRoot);
+const statisticview = new statisticView(statisticRoot);
 
 
 
@@ -44,6 +48,7 @@ function showAll(res) {
     rejectView.show();
     uploadview.show();
     settingsview.show();
+    statisticview.show();
 }
 
 // Инициирующий запрос за первым графиком и тегами
