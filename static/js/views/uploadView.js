@@ -1,15 +1,15 @@
-import getTemplate from '../components/uploadComponent/upload.js';
+import template from '../components/uploadComponent/upload.js';
 
 export default class uploadView {
     constructor(
         root = document.body,
     ) {
         this.root = root;
-        this.template = getTemplate();
+        // this.template = getTemplate();
     }
 
     show() {
-        this.root.innerHTML = this.template;
+        this.root.innerHTML = template;
 
         this.closeBtn = document.querySelector('.upload-close');
 

@@ -1,11 +1,13 @@
 export default function startLogic(
     // Нетворк хендлер
     netHand, 
-    
+
     // Пути
     apply,
     results,
+    statistic,
     settingsPath,
+    admin, 
 
     showAll) {
 
@@ -16,111 +18,8 @@ export default function startLogic(
     let btnSection = document.querySelector('.main__chose-section-buttons-section');
     let graph = document.querySelector('.main__chose-section-graph-image');
 
-    let uploadButton = document.querySelector('.header__container-hrefs-block-upload');
-    let uploadSection = document.querySelector('.upload');
     let uploadSaveButton = document.querySelector('.upload__input-form-save-btn');
-
-    let settingsButton = document.querySelector('.header__container-hrefs-block-settings');
-    let settingsSection = document.querySelector('.settings');
     let sendSettingsButton = document.querySelector('.settings-apply-btn');
-
-    let statisticButton = document.querySelector('.header__container-hrefs-block-statistic');
-    let statisticSection = document.querySelector('.statistic');
-    let statisticGraph = document.querySelector('.statistic-section-graph').getContext('2d');
-
-    uploadButton.addEventListener('click', () => {
-        uploadSection.style.display = 'flex';
-    })
-
-    settingsButton.addEventListener('click', () => {
-        settingsSection.style.display = 'flex';
-    })
-
-    statisticButton.addEventListener('click', () => {
-        statisticSection.style.display = 'flex';
-        // this.root.innerHTML = this.template;
-
-        let labels = [];
-        let count = [];
-        let colors = [];
-        let borderColors = [];
-        let colorsBase = [
-            'red',
-            'blue',
-            'green',
-            'Yellow',
-            'Fuchsia',
-            'Aqua',
-            'Lime',
-            'Maroon',
-            'Teal',
-            'Navy',
-        ]
-
-        netHand.doGet({ 
-            callback(data) {
-                if ( typeof(data) !== undefined) {
-                    let stats = JSON.parse(`[
-                        {
-                          "count": 1, 
-                          "username": "val"
-                        }, 
-                        {
-                          "count": 189, 
-                          "username": ""
-                        }, 
-                        {
-                          "count": 37, 
-                          "username": "evv"
-                        }, 
-                        {
-                          "count": 3005, 
-                          "username": "share1"
-                        }, 
-                        {
-                          "count": 2489, 
-                          "username": "share8"
-                        }, 
-                        {
-                          "total": 5721
-                        }
-                      ]`);
-    
-                    for (let i = 0; i < stats.length; i++){
-                        labels.push(stats[i].username);
-                        count.push(stats[i].count);
-                        colors.push(colorsBase[i]);
-                        borderColors.push(colorsBase[i]);
-                    };
-
-                    let chart = new Chart(statisticGraph, {
-                        type: 'pie',
-                        data: {
-                            labels: labels,
-                            datasets: [{
-                                label: '# of Votes',
-                                data: count,
-                                backgroundColor: colors,
-                                borderColor: borderColors,
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                }
-
-            },
-            path: '/api/stats',
-        })   
-    })
 
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
     // их доставать через undo
@@ -221,10 +120,6 @@ export default function startLogic(
                 undoHanddle();
                 break;
             }
-            case 27 : {
-                closeAllUpWindows(); 
-                break;
-            }
             case 37 : {
                 confirmHandle();
                 break;
@@ -240,16 +135,6 @@ export default function startLogic(
             }
         }
     })
-
-    const closeAllUpWindows = () => {
-        if (uploadSection.style.display == 'flex') {
-            uploadSection.style.display = 'none'
-        } else if (settingsSection.style.display == 'flex') {
-            settingsSection.style.display = 'none';
-        } else if (statisticSection.style.display == 'flex') {
-            statisticSection.style.display = 'none';
-        } 
-    }
     
     const confirmHandle = () => {
     
@@ -327,8 +212,6 @@ export default function startLogic(
             }
         }
 
-
-
         netHand.doPost({
             path : settingsPath,
             body : JSON.stringify(data),
@@ -360,7 +243,7 @@ export default function startLogic(
     
         netHand.doPost({
             callback(data) {
-                showAll(data);
+                showAll(data, netHand, statistic, results, admin);
                 nodeArr = [];
                 rejectBar = document.querySelector('.main__reject-bar-answers');
                 confirmBar = document.querySelector('.main__confirm-bar-answers');
@@ -368,11 +251,11 @@ export default function startLogic(
                 btnSection = document.querySelector('.main__chose-section-buttons-section');
                 graph = document.querySelector('.main__chose-section-graph-image');
                 
-                uploadSection = document.querySelector('.upload');
-                uploadButton = document.querySelector('.header__container-hrefs-block-upload');
+                // uploadSection = document.querySelector('.upload');
+                // uploadButton = document.querySelector('.header__container-hrefs-block-upload');
 
-                settingsButton = document.querySelector('.header__container-hrefs-block-settings');
-                settingsSection = document.querySelector('.settings');
+                // settingsButton = document.querySelector('.header__container-hrefs-block-settings');
+                // settingsSection = document.querySelector('.settings');
 
                 confirmBar.addEventListener('click', function callback(evt) {
                     forceUndo(this, evt);
@@ -383,12 +266,12 @@ export default function startLogic(
                 carousel.addEventListener('click', function callback(evt) {
                     forceConfirm(this, evt);
                 })
-                uploadButton.addEventListener('click', () => {
-                    uploadSection.style.display = 'flex';
-                })
-                sendSettingsButton.addEventListener('click', () => {    
-                    sendSettings();
-                });
+                // uploadButton.addEventListener('click', () => {
+                //     uploadSection.style.display = 'flex';
+                // })
+                // sendSettingsButton.addEventListener('click', () => {    
+                //     sendSettings();
+                // });
             },
             path : apply,
             body : answer,

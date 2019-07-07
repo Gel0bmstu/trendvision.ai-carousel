@@ -23,6 +23,18 @@ const tags = [
     'thi is the test too',
 ]
 
+exports.applyGet = (res) => {
+    const idx = Math.floor(Math.random() * imgs.length);
+    const url = imgs[idx];
+    json = JSON.stringify({
+        'admin': true,
+        'imgURL' : url,
+        'tags' : tags
+    });
+
+    res.send(json);
+}
+
 exports.apply = (res) => {
     const idx = Math.floor(Math.random() * imgs.length);
     const url = imgs[idx];

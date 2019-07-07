@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const handlers = require('./server/handlers.js')
 
-app.use(express.static('static'));
+app.use(express.static('./'));
 
 app.get('/api/apply',  (req, res) => {
     console.log(req.body);
-    handlers.apply(res);    
+    handlers.applyGet(res);    
 });
 
 app.post('/api/apply',  (req, res) => {

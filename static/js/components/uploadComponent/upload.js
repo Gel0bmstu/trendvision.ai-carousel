@@ -14,4 +14,4 @@ const templateScript = `
 
 const template = Handlebars.compile(templateScript);
 
-export default template;
+export default template();

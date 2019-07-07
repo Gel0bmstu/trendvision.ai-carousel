@@ -9,7 +9,9 @@ export default class choseSectionView {
     }
 
     show(data) {
+        console.log('get 1')
         this.template = getTemplate(data);
+        console.log('get 2')
         this.root.innerHTML = this.template;
     }
 }

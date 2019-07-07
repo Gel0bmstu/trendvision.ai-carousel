@@ -18,6 +18,7 @@ let apply = '/api/apply';   // То, куда отправляются разм�
 let initial = '/api/apply'; // Инициирующий запрос на бэк
 let results = '/api/results'; // Скачать CVS с бэка
 let settingsPath = '/api/settings'; // Отдать конфигурацию клиента (чекбоксы настроек) на бэк
+let statistic = '/api/stats'
 
 const heeaderRoot = document.querySelector('.header');
 const choseRoot = document.querySelector('.main__chose-section');
@@ -27,9 +28,6 @@ const settingsRoot = document.querySelector('.settings');
 const uploadRoot = document.querySelector('.upload');
 const statisticRoot = document.querySelector('.statistic');
 
-
-// console.log(heeaderRoot, choseRoot,confirmRoot,rejectRoot)
-
 const choseView = new choseSectionView(choseRoot);
 const headerview = new headerView(heeaderRoot);
 const confirmView = new confirmBarView(confirmRoot);
@@ -38,37 +36,22 @@ const settingsview = new settingsView(settingsRoot);
 const uploadview = new uploadView(uploadRoot);
 const statisticview = new statisticView(statisticRoot);
 
-
-
-headerview.show();
-
-function showAll(res) {
+function showAll(res, net, statistic, result, admin) {
     choseView.show(res);
     confirmView.show();
     rejectView.show();
     uploadview.show();
     settingsview.show();
     statisticview.show();
+
+    headerview.show(net, statistic, result, admin);
 }
 
 // Инициирующий запрос за первым графиком и тегами
 netHand.doGet({
     callback(res) {
-        console.log(res);
-        // Отрисовываем элементы
-        showAll(res)
-    
-        // запускаем логику
-        startLogic(netHand, apply, results, settingsPath, showAll);
+        showAll(res, netHand, statistic, results, res.admin)
+        startLogic(netHand, apply, results, statistic, settingsPath, res.admin, showAll);
     },
     path: initial,
 })
-
-
-
-// const successBtn = document.querySelector('success-btn');
-// const undoBtn = document.querySelector('undo-btn');
-// const rejectBtn = document.querySelector('reject-btn');
-// const applyBtn = document.querySelector('apply-btn');
-
-

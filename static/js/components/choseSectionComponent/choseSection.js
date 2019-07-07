@@ -19,6 +19,7 @@ const template = Handlebars.compile(templateScript);
 
 export default function getTemplate(data) {
 
+
     // for (let i = 0; i < data.tags.length; i++) {
     //     if (data.tags[i].length > 24 ) {
     //         console.log(data.tags[i]);
