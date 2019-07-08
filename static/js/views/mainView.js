@@ -20,6 +20,7 @@ export default function startLogic(
 
     let uploadSaveButton = document.querySelector('.upload__input-form-save-btn');
     let sendSettingsButton = document.querySelector('.settings-apply-btn');
+    let settingsSection = document.querySelector('.settings');
 
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
     // их доставать через undo
@@ -220,7 +221,7 @@ export default function startLogic(
             }
         }  
 
-        
+        settingsSection.style.display = 'none';
     }
 
     sendSettingsButton.addEventListener('click', () => {    
