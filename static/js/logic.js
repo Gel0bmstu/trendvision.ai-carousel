@@ -36,13 +36,10 @@ const settingsview = new settingsView(settingsRoot);
 const uploadview = new uploadView(uploadRoot);
 const statisticview = new statisticView(statisticRoot);
 
-function showAll(res, net, statistic, result, admin) {
+function showAll(res, net, statistic, result, admin, mode) {
     choseView.show(res);
-    confirmView.show();
-    rejectView.show();
-    uploadview.show();
-    settingsview.show();
-    statisticview.show();
+    confirmView.show(res, mode);
+    rejectView.show(res, mode);
 
     headerview.show(net, statistic, result, admin);
 }
@@ -50,7 +47,10 @@ function showAll(res, net, statistic, result, admin) {
 // Инициирующий запрос за первым графиком и тегами
 netHand.doGet({
     callback(res) {
-        showAll(res, netHand, statistic, results, res.admin)
+        settingsview.show(res.admin);
+        uploadview.show();
+        statisticview.show();
+        showAll(res, netHand, statistic, results, res.admin, 'markup')
         startLogic(netHand, apply, results, statistic, settingsPath, res.admin, showAll);
     },
     path: initial,

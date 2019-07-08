@@ -5,16 +5,15 @@ export default class settingsView {
         root = document.body,
     ) {
         this.root = root;
-        this.template = getTemplate();
     }
 
-    show() {
-        this.root.innerHTML = this.template;
+    show(admin) {
+        this.root.innerHTML = getTemplate(admin);
 
         this.closeBtn = document.querySelector('.settings-close');
 
         this.closeBtn.addEventListener('click', () => {
-            this.root.innerHTML = '';
+            // this.root.innerHTML = '';
             this.root.style.display = 'none';
         })
     }

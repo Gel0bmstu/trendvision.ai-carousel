@@ -35,13 +35,29 @@ exports.applyGet = (res) => {
     res.send(json);
 }
 
-exports.apply = (res) => {
+exports.apply = (res, mode) => {
     const idx = Math.floor(Math.random() * imgs.length);
     const url = imgs[idx];
-    json = JSON.stringify({
-        'imgURL' : url,
-        'tags' : tags
-    });
-
+    if (mode == 'markup') {
+        json = JSON.stringify({
+            'imgURL' : url,
+            'tags' : tags
+        });
+    } else {
+        json = JSON.stringify({
+            'imgURL' : url,
+            'confirmed' : [
+                'da',
+                'net',
+                'davai',
+            ],
+            'rejected' : [
+                'coldplay',
+                'russ rap',
+                'baby blin!',
+            ] 
+        })
+    }
+    
     res.send(json);
 }

@@ -24,6 +24,10 @@ export default function startLogic(
     // Сюда добавляем раскиданные теги, чтобы потом было удобнее
     // их доставать через undo
     let nodeArr = [];
+    let toolSettings = {
+        "settings" : [],
+        "mode": "markup",
+    };
 
     main.addEventListener('click', (evt) => {
         switch (evt.target.dataset.section) {
@@ -198,24 +202,25 @@ export default function startLogic(
         console.log("davai")
 
         let settingsList = {}
-        let data = {
-            "settings" : [],
-        };
 
         settingsList["currency"] = document.querySelector('.currency').checked;
         settingsList["gems"] = document.querySelector('.gems').checked;
         settingsList["companies"] = document.querySelector('.companies').checked;
+        if (document.querySelector('.validate').checked) {
+            toolSettings["mode"] = 'validate';
+        } else if (document.querySelector('.markup').checked) {
+            toolSettings["mode"] = 'markup';
+        } else {
+            toolSettings["mode"] = 'markup';
+        }
 
         for (let key in settingsList) {
             if (settingsList[key]) {
-                data["settings"].push(key)
+                toolSettings["settings"].push(key)
             }
-        }
+        }  
 
-        netHand.doPost({
-            path : settingsPath,
-            body : JSON.stringify(data),
-        })    
+        
     }
 
     sendSettingsButton.addEventListener('click', () => {    
@@ -227,11 +232,11 @@ export default function startLogic(
         let confirmed = [];
         const graphURL = graph.src;
     
-        for (let i = 0; i < rejectBar.childNodes.length; i++) {
+        for (let i = 0; i < rejectBar.children.length; i++) {
             rejected[i] = rejectBar.children[i].textContent;
         }
     
-        for (let i = 0; i < confirmBar.childNodes.length; i++) {
+        for (let i = 0; i < confirmBar.children.length; i++) {
             confirmed[i] = confirmBar.children[i].textContent;
         }
     
@@ -239,11 +244,12 @@ export default function startLogic(
             rejected : rejected,
             confirmed : confirmed,
             imgURL : graphURL,
+            settings : toolSettings,
         });
     
         netHand.doPost({
             callback(data) {
-                showAll(data, netHand, statistic, results, admin);
+                showAll(data, netHand, statistic, results, admin, toolSettings.mode);
                 nodeArr = [];
                 rejectBar = document.querySelector('.main__reject-bar-answers');
                 confirmBar = document.querySelector('.main__confirm-bar-answers');

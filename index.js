@@ -3,15 +3,15 @@ const app = express();
 const handlers = require('./server/handlers.js')
 
 app.use(express.static('./'));
+app.use(express.json());
+
 
 app.get('/api/apply',  (req, res) => {
-    console.log(req.body);
     handlers.applyGet(res);    
 });
 
-app.post('/api/apply',  (req, res) => {
-    console.log(req.body);
-    handlers.apply(res);
+app.post('/api/apply',  function(req, res) {
+    handlers.apply(res, req.body.settings.mode);
 });
 
 app.get('/api/stats',  (req, res) => {

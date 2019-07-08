@@ -5,10 +5,10 @@ export default class choseSectionView {
         root = document.body,
     ) {
         this.root = root;
-        this.template = getTemplate();
     }
 
-    show() {
+    show(data, mode) {
+        this.template = getTemplate(data, mode);
         this.root.innerHTML = this.template;
     }
 }

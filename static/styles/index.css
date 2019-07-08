@@ -628,7 +628,7 @@
   text-align: center;
   font-size: 40px;
   color: #ffffff;
-  margin-top: 10px;
+  margin: 10px 0 5px 0;
   text-decoration: none; }
 
 .settings__inputs-section {
@@ -659,6 +659,31 @@
   margin: 5px 0 0 0;
   color: #ffffff;
   font-size: 25px; }
+
+.settings__inputs-section-mode {
+  width: 40%;
+  height: 30px;
+  margin: 5px 0 0 0;
+  color: #ffffff;
+  font-size: 20px; }
+
+.settings__inputs-section-hr {
+  width: 90%;
+  height: 2px;
+  border: 0;
+  color: #575757;
+  background-color: #575757;
+  margin: 5px 0 5px 0; }
+
+.settings__inputs-section-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 95%; }
+
+.mode-title {
+  text-align: center;
+  margin-bottom: 5px; }
 
 .main__confirm-bar, .main__reject-bar {
   display: flex;
