@@ -997,9 +997,15 @@
   height: auto; }
 
 .statistic-section-graph {
-  height: 100%;
-  width: 95%;
+  height: 0;
+  width: 0;
   background-color: #636363; }
+
+.oops {
+  width: 95%;
+  margin: 0 auto 100px auto;
+  color: white;
+  text-align: center; }
 
 html, body {
   margin: 0;

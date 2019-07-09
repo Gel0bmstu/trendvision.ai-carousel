@@ -3,6 +3,7 @@ const templateScript = `
     <p class="statistic-title">Statistic</p>
     <div class="statistic-section">
         <canvas class="statistic-section-graph"></canvas>
+        <h1 class="oops">OOPS! Nothng here ;^(</h1>
     </div>
 `;
 

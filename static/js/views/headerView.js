@@ -105,28 +105,28 @@ export default class headerView {
                             borderColors.push(colorsBase[i]);
                         };
     
-                        let chart = new Chart(statisticGraph, {
-                            type: 'pie',
-                            data: {
-                                labels: labels,
-                                datasets: [{
-                                    label: '# of Votes',
-                                    data: count,
-                                    backgroundColor: colors,
-                                    borderColor: borderColors,
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero: true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
+                        // let chart = new Chart(statisticGraph, {
+                        //     type: 'pie',
+                        //     data: {
+                        //         labels: labels,
+                        //         datasets: [{
+                        //             label: '# of Votes',
+                        //             data: count,
+                        //             backgroundColor: colors,
+                        //             borderColor: borderColors,
+                        //             borderWidth: 1
+                        //         }]
+                        //     },
+                        //     options: {
+                        //         scales: {
+                        //             yAxes: [{
+                        //                 ticks: {
+                        //                     beginAtZero: true
+                        //                 }
+                        //             }]
+                        //         }
+                        //     }
+                        // });
                     }
     
                 },
