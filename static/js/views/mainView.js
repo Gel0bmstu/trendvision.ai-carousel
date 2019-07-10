@@ -18,7 +18,6 @@ export default function startLogic(
     let btnSection = document.querySelector('.main__chose-section-buttons-section');
     let graph = document.querySelector('.main__chose-section-graph-image');
 
-    let uploadSaveButton = document.querySelector('.upload__input-form-save-btn');
     let sendSettingsButton = document.querySelector('.settings-apply-btn');
     let settingsSection = document.querySelector('.settings');
 
@@ -50,12 +49,6 @@ export default function startLogic(
             }
         }
     });
-
-    uploadSaveButton.addEventListener('click', () => {
-        netHand.doGet({
-            path : results,
-        }) 
-    })
 
     // Функция удавозвращения в карусель по клику на тэг
     const forceUndo = (bar, evt) => {
