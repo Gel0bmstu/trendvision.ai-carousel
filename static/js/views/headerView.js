@@ -36,11 +36,11 @@ export default class headerView {
                 uploadSection.style.display = 'flex';
             });
 
-            resultButton.addEventListener('click', () => {
-                net.doGet({
-                    path: result,
-                })
-            });
+            // resultButton.addEventListener('click', () => {
+            //     net.doGet({
+            //         path: result,
+            //     })
+            // });
 
         }
 

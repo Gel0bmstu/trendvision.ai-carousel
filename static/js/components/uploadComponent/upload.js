@@ -7,8 +7,6 @@ const templateScript = `
             <input type="file" name="f" class="upload__input-form-section-file">
             <button type="submit" class="upload__input-form-section-send-btn">Send</button>
         </form>
-        <hr class="upload__input-form-hr">
-        <button class="upload__input-form-save-btn">Save</button>
     </div>
 `;
 
