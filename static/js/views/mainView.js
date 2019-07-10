@@ -226,6 +226,7 @@ export default function startLogic(
 
     sendSettingsButton.addEventListener('click', () => {    
         sendSettings();
+        applyHandle();
     });
 
     const applyHandle = () => {
