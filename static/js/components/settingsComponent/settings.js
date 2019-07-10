@@ -12,13 +12,13 @@ export default function getTemplate(admin) {
                     <input type="radio" class="settings__inputs-section-input markup" name="mode">Markup </br>
                 </form>
                 <hr class="settings__inputs-section-hr">
-                <p class="settings__inputs-section-tip">Show only global graphics</p>
+                <p class="settings__inputs-section-tip">Global graphics</p>
                 <input type="checkbox" class="settings__inputs-section-input currency">
-                <p class="settings__inputs-section-tip">Show only global shifts</p>
+                <p class="settings__inputs-section-tip">Global shifts</p>
                 <input type="checkbox" class="settings__inputs-section-input currency">
-                <p class="settings__inputs-section-tip">Show only trends</p>
+                <p class="settings__inputs-section-tip">Trends</p>
                 <input type="checkbox" class="settings__inputs-section-input gems">
-                <p class="settings__inputs-section-tip">Show only industries</p>        
+                <p class="settings__inputs-section-tip">Industries</p>        
                 <input type="checkbox" class="settings__inputs-section-input companies">
             </div>
             <button class="settings-apply-btn" data-section="save"><i class="fas fa-save" data-section="save"></i> Save</button>
